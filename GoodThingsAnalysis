@@ -1,0 +1,1759 @@
+[1] "Binary logisitc regression on non-users"
+[1] "---------------------------------------"
+[1] "                                       "
+
+Call:
+glm(formula = Nonuser ~ Education + DEP + HealthImpact + HTYPE + 
+    QLOC + AWTV3 + AWTV2, family = binomial(link = "logit"), 
+    data = X2018.uses.data.naomit.lcaresults)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.6160  -0.4462  -0.1854  -0.0801   3.3266  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -5.10489    0.77919  -6.552 5.70e-11 ***
+Education    -0.68853    0.09500  -7.247 4.25e-13 ***
+DEP           0.35173    0.13113   2.682 0.007311 ** 
+HealthImpact  0.46857    0.16790   2.791 0.005258 ** 
+HTYPE        -0.27604    0.08130  -3.395 0.000686 ***
+QLOC         -0.16173    0.21623  -0.748 0.454503    
+AWTV3         0.19673    0.07963   2.470 0.013493 *  
+AWTV2         1.63676    0.18160   9.013  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 1583.1  on 1881  degrees of freedom
+Residual deviance: 1076.2  on 1874  degrees of freedom
+AIC: 1092.2
+
+Number of Fisher Scoring iterations: 7
+
+ McFadden 
+0.3201879 
+Nagelkerke 
+  0.415107 
+ CoxSnell 
+0.2361099 
+
+	Hosmer and Lemeshow test (binary model)
+
+data:  fit.glmlogit.nonuser$y, fitted(fit.glmlogit.nonuser)
+X-squared = 9.1824, df = 8, p-value = 0.3271
+
+                               2.5 %     97.5 %
+(Intercept)  0.006066978 0.001270651 0.02705902
+Education    0.502315900 0.414101866 0.60151377
+DEP          1.421531337 1.099627228 1.83951611
+HealthImpact 1.597706550 1.147844478 2.21772695
+HTYPE        0.758783925 0.644309683 0.88670234
+QLOC         0.850673339 0.552555897 1.29179757
+AWTV3        1.217410535 1.042056715 1.42420756
+AWTV2        5.138507394 3.655342435 7.46007952
+Analysis of Deviance Table
+
+Model 1: Nonuser ~ 1
+Model 2: Nonuser ~ Education + DEP + HealthImpact + HTYPE + QLOC + AWTV3 + 
+    AWTV2
+  Resid. Df Resid. Dev Df Deviance  Pr(>Chi)    
+1      1881     1583.1                          
+2      1874     1076.2  7   506.88 < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+   Cell Contents 
+|-------------------------|
+|                       N | 
+| Chi-square contribution | 
+|           N / Row Total | 
+|           N / Col Total | 
+|         N / Table Total | 
+|-------------------------|
+
+=====================================================================
+                                             X2018.uses.data.naomit.lcaresults$modelnonuser
+X2018.uses.data.naomit.lcaresults$Nonuser         0         1   Total
+---------------------------------------------------------------------
+0                                              1552        50    1602
+                                              4.002    46.543        
+                                              0.969     0.031   0.851
+                                              0.896     0.336        
+                                              0.825     0.027        
+---------------------------------------------------------------------
+1                                               181        99     280
+                                             22.895   266.294        
+                                              0.646     0.354   0.149
+                                              0.104     0.664        
+                                              0.096     0.053        
+---------------------------------------------------------------------
+Total                                          1733       149    1882
+                                              0.921     0.079        
+=====================================================================
+[1] 0.8772582
+MODEL INFO:
+Observations: 1882
+Dependent Variable: Nonuser
+Type: Generalized linear model
+  Family: binomial 
+  Link function: logit 
+
+MODEL FIT:
+χ²(7) = 506.882, p = 0.000
+Pseudo-R² (Cragg-Uhler) = 0.415
+Pseudo-R² (McFadden) = 0.320
+AIC = 1092.194, BIC = 1136.515 
+
+Standard errors: MLE
+--------------------------------------------------------------
+                       Est.     2.5%    97.5%   z val.       p
+------------------ -------- -------- -------- -------- -------
+(Intercept)          -5.105   -6.632   -3.578   -6.552   0.000
+Education            -0.689   -0.875   -0.502   -7.247   0.000
+DEP                   0.352    0.095    0.609    2.682   0.007
+HealthImpact          0.469    0.139    0.798    2.791   0.005
+HTYPE                -0.276   -0.435   -0.117   -3.395   0.001
+QLOC                 -0.162   -0.586    0.262   -0.748   0.455
+AWTV3                 0.197    0.041    0.353    2.470   0.013
+AWTV2                 1.637    1.281    1.993    9.013   0.000
+--------------------------------------------------------------
+─────────────────────────────────────────────────
+                                 Model 1         
+                        ─────────────────────────
+  (Intercept)                         -5.10 ***  
+                                      (0.78)     
+  Education                           -0.69 ***  
+                                      (0.10)     
+  DEP                                  0.35 **   
+                                      (0.13)     
+  HealthImpact                         0.47 **   
+                                      (0.17)     
+  HTYPE                               -0.28 ***  
+                                      (0.08)     
+  QLOC                                -0.16      
+                                      (0.22)     
+  AWTV3                                0.20 *    
+                                      (0.08)     
+  AWTV2                                1.64 ***  
+                                      (0.18)     
+                        ─────────────────────────
+  N                                 1882         
+  AIC                               1092.19      
+  BIC                               1136.51      
+  Pseudo R2                            0.42      
+─────────────────────────────────────────────────
+  *** p < 0.001; ** p < 0.01; * p < 0.05.        
+
+Column names: names, Model 1
+[1] "Binary logisitc regression on limited users - only comparing to users"
+[1] "---------------------------------------------------------------------"
+[1] "                                       "
+
+Call:
+glm(formula = CombinedLimitedUser ~ Education + DEP + HealthImpact + 
+    HTYPE + QLOC + AWTV3 + AWTV2, family = binomial(link = "logit"), 
+    data = X2018.uses.data.naomit.lcaresults.usersonly)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.7459  -0.6907  -0.4296   0.7194   2.7140  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -3.27685    0.52532  -6.238 4.44e-10 ***
+Education    -0.33852    0.06033  -5.611 2.01e-08 ***
+DEP           0.05117    0.11018   0.464  0.64236    
+HealthImpact  0.49455    0.16880   2.930  0.00339 ** 
+HTYPE        -0.11291    0.04968  -2.273  0.02304 *  
+QLOC          0.15154    0.17395   0.871  0.38368    
+AWTV3         0.30546    0.06802   4.491 7.10e-06 ***
+AWTV2         0.97865    0.10205   9.590  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 1809.4  on 1601  degrees of freedom
+Residual deviance: 1477.6  on 1594  degrees of freedom
+AIC: 1493.6
+
+Number of Fisher Scoring iterations: 5
+
+ McFadden 
+0.1833747 
+Nagelkerke 
+ 0.2764104 
+ CoxSnell 
+0.1870711 
+
+	Hosmer and Lemeshow test (binary model)
+
+data:  fit.glmlogit.limited$y, fitted(fit.glmlogit.limited)
+X-squared = 5.2714, df = 8, p-value = 0.7282
+
+                             2.5 %    97.5 %
+(Intercept)  0.03774708 0.01333443 0.1046876
+Education    0.71282104 0.63270031 0.8016640
+DEP          1.05250218 0.84742068 1.3056257
+HealthImpact 1.63975941 1.17612588 2.2806525
+HTYPE        0.89322846 0.80983769 0.9841419
+QLOC         1.16361917 0.82501885 1.6325840
+AWTV3        1.35725513 1.18834140 1.5517533
+AWTV2        2.66086179 2.18580157 3.2620134
+Analysis of Deviance Table
+
+Model 1: CombinedLimitedUser ~ 1
+Model 2: CombinedLimitedUser ~ Education + DEP + HealthImpact + HTYPE + 
+    QLOC + AWTV3 + AWTV2
+  Resid. Df Resid. Dev Df Deviance  Pr(>Chi)    
+1      1601     1809.4                          
+2      1594     1477.6  7   331.79 < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+   Cell Contents 
+|-------------------------|
+|                       N | 
+| Chi-square contribution | 
+|           N / Row Total | 
+|           N / Col Total | 
+|         N / Table Total | 
+|-------------------------|
+
+===========================================================================================
+                                                                   X2018.uses.data.naomit.lcaresults.usersonly$modellimited
+X2018.uses.data.naomit.lcaresults.usersonly$CombinedLimitedUser         0         1   Total
+-------------------------------------------------------------------------------------------
+0                                                                    1095       103    1198
+                                                                    7.909    41.390        
+                                                                    0.914     0.086   0.748
+                                                                    0.814     0.401        
+                                                                    0.684     0.064        
+-------------------------------------------------------------------------------------------
+1                                                                     250       154     404
+                                                                   23.452   122.734        
+                                                                    0.619     0.381   0.252
+                                                                    0.186     0.599        
+                                                                    0.156     0.096        
+-------------------------------------------------------------------------------------------
+Total                                                                1345       257    1602
+                                                                     0.84      0.16        
+===========================================================================================
+[1] 0.7796504
+MODEL INFO:
+Observations: 1602
+Dependent Variable: CombinedLimitedUser
+Type: Generalized linear model
+  Family: binomial 
+  Link function: logit 
+
+MODEL FIT:
+χ²(7) = 331.793, p = 0.000
+Pseudo-R² (Cragg-Uhler) = 0.276
+Pseudo-R² (McFadden) = 0.183
+AIC = 1493.578, BIC = 1536.611 
+
+Standard errors: MLE
+--------------------------------------------------------------
+                       Est.     2.5%    97.5%   z val.       p
+------------------ -------- -------- -------- -------- -------
+(Intercept)          -3.277   -4.306   -2.247   -6.238   0.000
+Education            -0.339   -0.457   -0.220   -5.611   0.000
+DEP                   0.051   -0.165    0.267    0.464   0.642
+HealthImpact          0.495    0.164    0.825    2.930   0.003
+HTYPE                -0.113   -0.210   -0.016   -2.273   0.023
+QLOC                  0.152   -0.189    0.492    0.871   0.384
+AWTV3                 0.305    0.172    0.439    4.491   0.000
+AWTV2                 0.979    0.779    1.179    9.590   0.000
+--------------------------------------------------------------
+─────────────────────────────────────────────────
+                                 Model 1         
+                        ─────────────────────────
+  (Intercept)                         -3.28 ***  
+                                      (0.53)     
+  Education                           -0.34 ***  
+                                      (0.06)     
+  DEP                                  0.05      
+                                      (0.11)     
+  HealthImpact                         0.49 **   
+                                      (0.17)     
+  HTYPE                               -0.11 *    
+                                      (0.05)     
+  QLOC                                 0.15      
+                                      (0.17)     
+  AWTV3                                0.31 ***  
+                                      (0.07)     
+  AWTV2                                0.98 ***  
+                                      (0.10)     
+                        ─────────────────────────
+  N                                 1602         
+  AIC                               1493.58      
+  BIC                               1536.61      
+  Pseudo R2                            0.28      
+─────────────────────────────────────────────────
+  *** p < 0.001; ** p < 0.01; * p < 0.05.        
+
+Column names: names, Model 1
+[1] "Binary logisitc regression on limited social media users - only comparing to users"
+[1] "----------------------------------------------------------------------------------"
+[1] "                                       "
+
+Call:
+glm(formula = LimitedUserSocialMedia ~ Education + DEP + HealthImpact + 
+    HTYPE + QLOC + AWTV3 + AWTV2, family = binomial(link = "logit"), 
+    data = X2018.uses.data.naomit.lcaresults.usersonly)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.2205  -0.5391  -0.3736  -0.2516   2.7811  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -4.16390    0.66739  -6.239 4.40e-10 ***
+Education    -0.43087    0.08411  -5.123 3.01e-07 ***
+DEP           0.22053    0.13673   1.613 0.106775    
+HealthImpact  0.51088    0.19808   2.579 0.009903 ** 
+HTYPE         0.04171    0.06200   0.673 0.501164    
+QLOC          0.55688    0.20846   2.671 0.007552 ** 
+AWTV3         0.28874    0.08607   3.355 0.000794 ***
+AWTV2         0.47771    0.12499   3.822 0.000132 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 1158.6  on 1601  degrees of freedom
+Residual deviance: 1034.7  on 1594  degrees of freedom
+AIC: 1050.7
+
+Number of Fisher Scoring iterations: 5
+
+ McFadden 
+0.1069693 
+Nagelkerke 
+  0.144608 
+  CoxSnell 
+0.07444718 
+
+	Hosmer and Lemeshow test (binary model)
+
+data:  fit.glmlogit.limitedsoc$y, fitted(fit.glmlogit.limitedsoc)
+X-squared = 8.6469, df = 8, p-value = 0.373
+
+                              2.5 %     97.5 %
+(Intercept)  0.01554676 0.004124414 0.05656784
+Education    0.64994072 0.549150020 0.76406991
+DEP          1.24673115 0.952567012 1.62908290
+HealthImpact 1.66675802 1.123218177 2.44445441
+HTYPE        1.04258830 0.922709955 1.17697852
+QLOC         1.74522312 1.152203708 2.61292277
+AWTV3        1.33474349 1.128739451 1.58218533
+AWTV2        1.61238577 1.267040238 2.06950659
+Analysis of Deviance Table
+
+Model 1: LimitedUserSocialMedia ~ 1
+Model 2: LimitedUserSocialMedia ~ Education + DEP + HealthImpact + HTYPE + 
+    QLOC + AWTV3 + AWTV2
+  Resid. Df Resid. Dev Df Deviance  Pr(>Chi)    
+1      1601     1158.6                          
+2      1594     1034.7  7   123.94 < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+   Cell Contents 
+|-------------------------|
+|                       N | 
+| Chi-square contribution | 
+|           N / Row Total | 
+|           N / Col Total | 
+|         N / Table Total | 
+|-------------------------|
+
+============================================================================================
+                                                                      X2018.uses.data.naomit.lcaresults.usersonly$modellimitedsoc
+X2018.uses.data.naomit.lcaresults.usersonly$LimitedUserSocialMedia        0        1   Total
+--------------------------------------------------------------------------------------------
+0                                                                      1413        1    1414
+                                                                      0.005    1.814        
+                                                                      0.999    0.001   0.883
+                                                                      0.884    0.250        
+                                                                      0.882    0.001        
+--------------------------------------------------------------------------------------------
+1                                                                       185        3     188
+                                                                      0.034   13.642        
+                                                                      0.984    0.016   0.117
+                                                                      0.116    0.750        
+                                                                      0.115    0.002        
+--------------------------------------------------------------------------------------------
+Total                                                                  1598        4    1602
+                                                                      0.998    0.002        
+============================================================================================
+[1] 0.8838951
+MODEL INFO:
+Observations: 1602
+Dependent Variable: LimitedUserSocialMedia
+Type: Generalized linear model
+  Family: binomial 
+  Link function: logit 
+
+MODEL FIT:
+χ²(7) = 123.937, p = 0.000
+Pseudo-R² (Cragg-Uhler) = 0.145
+Pseudo-R² (McFadden) = 0.107
+AIC = 1050.688, BIC = 1093.720 
+
+Standard errors: MLE
+--------------------------------------------------------------
+                       Est.     2.5%    97.5%   z val.       p
+------------------ -------- -------- -------- -------- -------
+(Intercept)          -4.164   -5.472   -2.856   -6.239   0.000
+Education            -0.431   -0.596   -0.266   -5.123   0.000
+DEP                   0.221   -0.047    0.489    1.613   0.107
+HealthImpact          0.511    0.123    0.899    2.579   0.010
+HTYPE                 0.042   -0.080    0.163    0.673   0.501
+QLOC                  0.557    0.148    0.965    2.671   0.008
+AWTV3                 0.289    0.120    0.457    3.355   0.001
+AWTV2                 0.478    0.233    0.723    3.822   0.000
+--------------------------------------------------------------
+─────────────────────────────────────────────────
+                                 Model 1         
+                        ─────────────────────────
+  (Intercept)                         -4.16 ***  
+                                      (0.67)     
+  Education                           -0.43 ***  
+                                      (0.08)     
+  DEP                                  0.22      
+                                      (0.14)     
+  HealthImpact                         0.51 **   
+                                      (0.20)     
+  HTYPE                                0.04      
+                                      (0.06)     
+  QLOC                                 0.56 **   
+                                      (0.21)     
+  AWTV3                                0.29 ***  
+                                      (0.09)     
+  AWTV2                                0.48 ***  
+                                      (0.12)     
+                        ─────────────────────────
+  N                                 1602         
+  AIC                               1050.69      
+  BIC                               1093.72      
+  Pseudo R2                            0.14      
+─────────────────────────────────────────────────
+  *** p < 0.001; ** p < 0.01; * p < 0.05.        
+
+Column names: names, Model 1
+[1] "Binary logisitc regression on social media only users - only comparing to users"
+[1] "-------------------------------------------------------------------------------"
+[1] "                                       "
+
+Call:
+glm(formula = SocialMediaOnly ~ Education + DEP + HealthImpact + 
+    HTYPE + QLOC + AWTV3 + AWTV2, family = binomial(link = "logit"), 
+    data = X2018.uses.data.naomit.lcaresults)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.3989  -0.6280  -0.3423  -0.2700   2.6939  
+
+Coefficients:
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept)   0.33442    0.49095   0.681   0.4958    
+Education    -0.08759    0.06079  -1.441   0.1496    
+DEP           0.23303    0.10105   2.306   0.0211 *  
+HealthImpact -0.30787    0.21910  -1.405   0.1600    
+HTYPE         0.07312    0.04262   1.716   0.0862 .  
+QLOC          0.15072    0.18949   0.795   0.4264    
+AWTV3         0.07231    0.07044   1.026   0.3047    
+AWTV2        -1.31751    0.09483 -13.894   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 1871.3  on 1881  degrees of freedom
+Residual deviance: 1534.3  on 1874  degrees of freedom
+AIC: 1550.3
+
+Number of Fisher Scoring iterations: 5
+
+ McFadden 
+0.1800922 
+Nagelkerke 
+ 0.2602282 
+ CoxSnell 
+0.1639472 
+
+	Hosmer and Lemeshow test (binary model)
+
+data:  fit.glmlogit.socmedonly$y, fitted(fit.glmlogit.socmedonly)
+X-squared = 6.9366, df = 8, p-value = 0.5435
+
+                           2.5 %    97.5 %
+(Intercept)  1.3971350 0.5343821 3.6665428
+Education    0.9161398 0.8128431 1.0317200
+DEP          1.2624172 1.0355023 1.5392053
+HealthImpact 0.7350103 0.4727662 1.1184473
+HTYPE        1.0758617 0.9894186 1.1694565
+QLOC         1.1626656 0.7970796 1.6772798
+AWTV3        1.0749852 0.9363890 1.2344057
+AWTV2        0.2678019 0.2218127 0.3217577
+Analysis of Deviance Table
+
+Model 1: SocialMediaOnly ~ 1
+Model 2: SocialMediaOnly ~ Education + DEP + HealthImpact + HTYPE + QLOC + 
+    AWTV3 + AWTV2
+  Resid. Df Resid. Dev Df Deviance  Pr(>Chi)    
+1      1881     1871.2                          
+2      1874     1534.2  7      337 < 2.2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+   Cell Contents 
+|-------------------------|
+|                       N | 
+| Chi-square contribution | 
+|           N / Row Total | 
+|           N / Col Total | 
+|         N / Table Total | 
+|-------------------------|
+
+=====================================================================================
+                                                               X2018.uses.data.naomit.lcaresults.usersonly$modelsocmedonly
+X2018.uses.data.naomit.lcaresults.usersonly$SocialMediaOnly        0        1   Total
+-------------------------------------------------------------------------------------
+0                                                               1176       54    1230
+                                                               1.440   17.316        
+                                                               0.956    0.044   0.768
+                                                               0.795    0.439        
+                                                               0.734    0.034        
+-------------------------------------------------------------------------------------
+1                                                                303       69     372
+                                                               4.761   57.253        
+                                                               0.815    0.185   0.232
+                                                               0.205    0.561        
+                                                               0.189    0.043        
+-------------------------------------------------------------------------------------
+Total                                                           1479      123    1602
+                                                               0.923    0.077        
+=====================================================================================
+MODEL INFO:
+Observations: 1882
+Dependent Variable: SocialMediaOnly
+Type: Generalized linear model
+  Family: binomial 
+  Link function: logit 
+
+MODEL FIT:
+χ²(7) = 336.998, p = 0.000
+Pseudo-R² (Cragg-Uhler) = 0.260
+Pseudo-R² (McFadden) = 0.180
+AIC = 1550.253, BIC = 1594.574 
+
+Standard errors: MLE
+---------------------------------------------------------------
+                       Est.     2.5%    97.5%    z val.       p
+------------------ -------- -------- -------- --------- -------
+(Intercept)           0.334   -0.628    1.297     0.681   0.496
+Education            -0.088   -0.207    0.032    -1.441   0.150
+DEP                   0.233    0.035    0.431     2.306   0.021
+HealthImpact         -0.308   -0.737    0.122    -1.405   0.160
+HTYPE                 0.073   -0.010    0.157     1.716   0.086
+QLOC                  0.151   -0.221    0.522     0.795   0.426
+AWTV3                 0.072   -0.066    0.210     1.026   0.305
+AWTV2                -1.318   -1.503   -1.132   -13.894   0.000
+---------------------------------------------------------------
+─────────────────────────────────────────────────
+                                 Model 1         
+                        ─────────────────────────
+  (Intercept)                          0.33      
+                                      (0.49)     
+  Education                           -0.09      
+                                      (0.06)     
+  DEP                                  0.23 *    
+                                      (0.10)     
+  HealthImpact                        -0.31      
+                                      (0.22)     
+  HTYPE                                0.07      
+                                      (0.04)     
+  QLOC                                 0.15      
+                                      (0.19)     
+  AWTV3                                0.07      
+                                      (0.07)     
+  AWTV2                               -1.32 ***  
+                                      (0.09)     
+                        ─────────────────────────
+  N                                 1882         
+  AIC                               1550.25      
+  BIC                               1594.57      
+  Pseudo R2                            0.26      
+─────────────────────────────────────────────────
+  *** p < 0.001; ** p < 0.01; * p < 0.05.        
+
+Column names: names, Model 1
+[1] "Multinominal logisitc regression Latent Classes"
+[1] "-----------------------------------------------"
+[1] "                                       "
+# weights:  63 (48 variable)
+initial  value 3662.202901 
+iter  10 value 3101.524361
+iter  20 value 3016.273411
+iter  30 value 2964.905011
+iter  40 value 2954.067176
+iter  50 value 2953.276202
+final  value 2953.272428 
+converged
+[1] "Multinominal B values"
+[1] "---------------------"
+[1] "                                       "
+Call:
+multinom(formula = Latent_Class ~ Education + DEP + HealthImpact + 
+    HTYPE + QLOC + AWTV3 + AWTV2, data = X2018.uses.data.naomit.lcaresults)
+
+Coefficients:
+  (Intercept)  Education         DEP HealthImpact       HTYPE      QLOC      AWTV3      AWTV2
+2  -1.4631541 -0.2530184 -0.04875330    0.3521021 -0.03099181 0.4110295 0.22733332  0.5042224
+3  -2.4005408 -0.2467428 -0.05409600    0.1626294 -0.16249574 0.2560532 0.06366874  1.0046813
+4   0.3455072 -0.3410205  0.29099916    0.2080665 -0.03099394 0.4122329 0.27929183 -0.6259638
+5  -3.4507742 -0.6633914  0.26128746    0.8229822 -0.05268943 0.8536556 0.51142071  0.7680164
+6  -3.0676585 -0.4188352 -0.05512782    0.5314716 -0.27239497 0.1252921 0.41213356  1.3968181
+7  -4.9002017 -1.0033604  0.41228356    0.9217853 -0.37798111 0.2055202 0.49403902  2.1270329
+
+Std. Errors:
+  (Intercept)  Education       DEP HealthImpact      HTYPE      QLOC      AWTV3     AWTV2
+2   0.6149758 0.07328657 0.1325375    0.2811480 0.05384904 0.2241290 0.08820317 0.1172141
+3   0.8258077 0.09297504 0.1766247    0.3403482 0.07592568 0.2820817 0.11396774 0.1646047
+4   0.5760379 0.07024487 0.1197387    0.2941308 0.04997617 0.2284495 0.08427074 0.1146156
+5   0.7636124 0.09498966 0.1583888    0.2846416 0.06820547 0.2581455 0.10318726 0.1462934
+6   0.7809789 0.08647350 0.1602723    0.2836510 0.07529726 0.2643173 0.10030594 0.1621499
+7   0.9037531 0.10873250 0.1632666    0.2763300 0.08973760 0.2780378 0.10345864 0.2054310
+
+Residual Deviance: 5906.545 
+AIC: 6002.545 
+[1] "Multinominal z scores"
+[1] "---------------------"
+[1] "                                       "
+  (Intercept) Education        DEP HealthImpact      HTYPE      QLOC     AWTV3     AWTV2
+2  -2.3792061 -3.452453 -0.3678452    1.2523728 -0.5755314 1.8338968 2.5773827  4.301720
+3  -2.9069004 -2.653861 -0.3062765    0.4778324 -2.1401948 0.9077271 0.5586558  6.103600
+4   0.5997993 -4.854739  2.4302840    0.7073945 -0.6201744 1.8044819 3.3142207 -5.461421
+5  -4.5190129 -6.983828  1.6496588    2.8912931 -0.7725104 3.3068775 4.9562387  5.249837
+6  -3.9279657 -4.843509 -0.3439634    1.8736815 -3.6175947 0.4740215 4.1087655  8.614364
+7  -5.4220580 -9.227788  2.5252166    3.3358136 -4.2120707 0.7391808 4.7752320 10.354003
+[1] "Multinominal p values"
+[1] "---------------------"
+[1] "                                       "
+   (Intercept)    Education         DEP HealthImpact        HTYPE         QLOC        AWTV3        AWTV2
+2 5.021802e-03 1.088837e-02 0.728549241 0.1958087987 4.829696e-01 0.0567721380 2.099864e-03 2.953656e-05
+3 2.829149e-03 1.339216e-02 0.763331565 0.6444350945 2.628742e-02 0.3293189333 4.865662e-01 2.631426e-09
+4 6.788395e-01 5.991646e-03 0.012560335 0.4161700725 4.465255e-01 0.0592009543 1.448565e-05 2.799928e-08
+5 2.119566e-07 5.192787e-08 0.081187719 0.0032085909 2.800710e-01 0.0007363578 7.562500e-09 3.310866e-07
+6 1.097655e-05 1.296139e-04 0.764868087 0.0542472596 1.448024e-04 0.6010151679 1.900445e-06 0.000000e+00
+7 2.140995e-09 6.661338e-16 0.007276474 0.0008041184 6.194344e-06 0.4575961323 3.170231e-08 0.000000e+00
+[1] "Multinominal odds ratios"
+[1] "------------------------"
+[1] "                                       "
+  (Intercept) Education       DEP HealthImpact     HTYPE     QLOC    AWTV3     AWTV2
+2 0.231504939 0.7764536 0.9524161     1.422054 0.9694835 1.508370 1.255248 1.6556976
+3 0.090668909 0.7813416 0.9473412     1.176601 0.8500197 1.291821 1.065739 2.7310368
+4 1.412706204 0.7110443 1.3377635     1.231295 0.9694814 1.510186 1.322193 0.5347458
+5 0.031721068 0.5151015 1.2986009     2.277281 0.9486746 2.348215 1.667659 2.1554863
+6 0.046529976 0.6578126 0.9463642     1.701434 0.7615534 1.133479 1.510036 4.0423173
+7 0.007445081 0.3666453 1.5102626     2.513774 0.6852434 1.228164 1.638923 8.3899357
+[1] Cramér V / Phi:
+[1] Cramér V / Phi:
+[1] Cramér V / Phi:
+[1] Cramér V / Phi:
+[1] Cramér V / Phi:
+[1] Cramér V / Phi:
+[1] Cramér V / Phi:
+[1] Cramér V / Phi:
+   Cell Contents 
+|-------------------------|
+|                   Count | 
+|             Row Percent | 
+|          Column Percent | 
+|           Total Percent | 
+|-------------------------|
+
+=====================================================================================
+                 Education
+Latent Class     Aged 16 or under   Aged 17-18   Aged 19-20   Aged 21 or over   Total
+-------------------------------------------------------------------------------------
+Other Users                   539          315          169               455    1478
+row %                        36.5         21.3         11.4              30.8    78.5
+col %                        70.6         79.3         86.7              86.3        
+table %                      28.6         16.7          9.0              24.2        
+-------------------------------------------------------------------------------------
+Limited Users                 224           82           26                72     404
+row %                        55.4         20.3          6.4              17.8    21.5
+col %                        29.4         20.7         13.3              13.7        
+table %                      11.9          4.4          1.4               3.8        
+-------------------------------------------------------------------------------------
+Total                         763          397          195               527    1882
+                             40.5         21.1         10.4              28.0        
+=====================================================================================
+
+Statistics for All Table Factors
+
+Pearson's Chi-squared test 
+------------------------------------------------------------
+Chi^2 = 55.03019      d.f. = 3      p = 6.77e-12 
+
+        Minimum expected frequency: 41.85972 
+
+[1] Cramér V / Phi:
+   Cell Contents 
+|-------------------------|
+|                   Count | 
+|             Row Percent | 
+|          Column Percent | 
+|           Total Percent | 
+|-------------------------|
+
+=============================================
+                 DEP
+Latent Class      Low   Medium   High   Total
+---------------------------------------------
+Other Users       657      660    161    1478
+row %            44.5     44.7   10.9    78.5
+col %            78.2     76.9   87.5        
+table %          34.9     35.1    8.6        
+---------------------------------------------
+Limited Users     183      198     23     404
+row %            45.3     49.0    5.7    21.5
+col %            21.8     23.1   12.5        
+table %           9.7     10.5    1.2        
+---------------------------------------------
+Total             840      858    184    1882
+                 44.6     45.6    9.8        
+=============================================
+
+Statistics for All Table Factors
+
+Pearson's Chi-squared test 
+------------------------------------------------------------
+Chi^2 = 10.1457      d.f. = 2      p = 0.00626 
+
+        Minimum expected frequency: 39.49841 
+
+[1] Cramér V / Phi:
+   Cell Contents 
+|-------------------------|
+|                   Count | 
+|             Row Percent | 
+|          Column Percent | 
+|           Total Percent | 
+|-------------------------|
+
+====================================
+                 HealthImpact
+Latent Class        0      1   Total
+------------------------------------
+Other Users      1257    221    1478
+row %            85.0   15.0    78.5
+col %            80.5   68.8        
+table %          66.8   11.7        
+------------------------------------
+Limited Users     304    100     404
+row %            75.2   24.8    21.5
+col %            19.5   31.2        
+table %          16.2    5.3        
+------------------------------------
+Total            1561    321    1882
+                 82.9   17.1        
+====================================
+
+Statistics for All Table Factors
+
+Pearson's Chi-squared test 
+------------------------------------------------------------
+Chi^2 = 21.53799      d.f. = 1      p = 3.47e-06 
+
+Pearson's Chi-squared test with Yates' continuity correction 
+------------------------------------------------------------
+Chi^2 = 20.85085      d.f. = 1      p = 4.96e-06 
+        Minimum expected frequency: 68.90755 
+
+[1] Cramér V / Phi:
+   Cell Contents 
+|-------------------------|
+|                   Count | 
+|             Row Percent | 
+|          Column Percent | 
+|           Total Percent | 
+|-------------------------|
+
+===================================================================================================================
+                 HTYPE
+Latent Class     1 adult   2 adults   3+ adults   1 adult & childrn   2 adults & chldrn   3+ adlts & chldrn   Total
+-------------------------------------------------------------------------------------------------------------------
+Other Users          273        461         250                  79                 318                  97    1478
+row %               18.5       31.2        16.9                 5.3                21.5                 6.6    78.5
+col %               70.2       73.9        84.2                84.0                87.6                84.3        
+table %             14.5       24.5        13.3                 4.2                16.9                 5.2        
+-------------------------------------------------------------------------------------------------------------------
+Limited Users        116        163          47                  15                  45                  18     404
+row %               28.7       40.3        11.6                 3.7                11.1                 4.5    21.5
+col %               29.8       26.1        15.8                16.0                12.4                15.7        
+table %              6.2        8.7         2.5                 0.8                 2.4                 1.0        
+-------------------------------------------------------------------------------------------------------------------
+Total                389        624         297                  94                 363                 115    1882
+                    20.7       33.2        15.8                 5.0                19.3                 6.1        
+===================================================================================================================
+
+Statistics for All Table Factors
+
+Pearson's Chi-squared test 
+------------------------------------------------------------
+Chi^2 = 51.44172      d.f. = 5      p = 7.02e-10 
+
+        Minimum expected frequency: 20.17853 
+
+[1] Cramér V / Phi:
+   Cell Contents 
+|-------------------------|
+|                   Count | 
+|             Row Percent | 
+|          Column Percent | 
+|           Total Percent | 
+|-------------------------|
+
+======================================
+                 QLOC
+Latent Class     Urban   Rural   Total
+--------------------------------------
+Other Users       1253     225    1478
+row %             84.8    15.2    78.5
+col %             79.5    73.5        
+table %           66.6    12.0        
+--------------------------------------
+Limited Users      323      81     404
+row %             80.0    20.0    21.5
+col %             20.5    26.5        
+table %           17.2     4.3        
+--------------------------------------
+Total             1576     306    1882
+                  83.7    16.3        
+======================================
+
+Statistics for All Table Factors
+
+Pearson's Chi-squared test 
+------------------------------------------------------------
+Chi^2 = 5.427675      d.f. = 1      p = 0.0198 
+
+Pearson's Chi-squared test with Yates' continuity correction 
+------------------------------------------------------------
+Chi^2 = 5.079      d.f. = 1      p = 0.0242 
+        Minimum expected frequency: 65.68757 
+
+[1] Cramér V / Phi:
+   Cell Contents 
+|-------------------------|
+|                   Count | 
+|             Row Percent | 
+|          Column Percent | 
+|           Total Percent | 
+|-------------------------|
+
+==================================================
+                 AWTV3
+Latent Class       AB     C1     C2     DE   Total
+--------------------------------------------------
+Other Users       333    496    300    349    1478
+row %            22.5   33.6   20.3   23.6    78.5
+col %            84.3   82.1   78.7   69.5        
+table %          17.7   26.4   15.9   18.5        
+--------------------------------------------------
+Limited Users      62    108     81    153     404
+row %            15.3   26.7   20.0   37.9    21.5
+col %            15.7   17.9   21.3   30.5        
+table %           3.3    5.7    4.3    8.1        
+--------------------------------------------------
+Total             395    604    381    502    1882
+                 21.0   32.1   20.2   26.7        
+==================================================
+
+Statistics for All Table Factors
+
+Pearson's Chi-squared test 
+------------------------------------------------------------
+Chi^2 = 36.59948      d.f. = 3      p = 5.59e-08 
+
+        Minimum expected frequency: 81.78746 
+
+[1] Cramér V / Phi:
+   Cell Contents 
+|-------------------------|
+|                   Count | 
+|             Row Percent | 
+|          Column Percent | 
+|           Total Percent | 
+|-------------------------|
+
+=============================================================================
+                 S2XX
+Latent Class     16-24   25-34   35-44   45-54   55-64   65-74    75+   Total
+-----------------------------------------------------------------------------
+Other Users        225     223     275     224     221     146    164    1478
+row %             15.2    15.1    18.6    15.2    15.0     9.9   11.1    78.5
+col %             91.5    87.1    85.4    82.4    71.5    66.1   64.1        
+table %           12.0    11.8    14.6    11.9    11.7     7.8    8.7        
+-----------------------------------------------------------------------------
+Limited Users       21      33      47      48      88      75     92     404
+row %              5.2     8.2    11.6    11.9    21.8    18.6   22.8    21.5
+col %              8.5    12.9    14.6    17.6    28.5    33.9   35.9        
+table %            1.1     1.8     2.5     2.6     4.7     4.0    4.9        
+-----------------------------------------------------------------------------
+Total              246     256     322     272     309     221    256    1882
+                  13.1    13.6    17.1    14.5    16.4    11.7   13.6        
+=============================================================================
+
+Statistics for All Table Factors
+
+Pearson's Chi-squared test 
+------------------------------------------------------------
+Chi^2 = 108.1309      d.f. = 6      p <2e-16 
+
+        Minimum expected frequency: 47.44102 
+
+[1] Cramér V / Phi:
+   Cell Contents 
+|-------------------------|
+|                   Count | 
+|             Row Percent | 
+|          Column Percent | 
+|           Total Percent | 
+|-------------------------|
+
+=============================================
+                 AWTV2
+Latent Class     16-34   35-54    55+   Total
+---------------------------------------------
+Other Users        448     499    531    1478
+row %             30.3    33.8   35.9    78.5
+col %             89.2    84.0   67.6        
+table %           23.8    26.5   28.2        
+---------------------------------------------
+Limited Users       54      95    255     404
+row %             13.4    23.5   63.1    21.5
+col %             10.8    16.0   32.4        
+table %            2.9     5.0   13.5        
+---------------------------------------------
+Total              502     594    786    1882
+                  26.7    31.6   41.8        
+=============================================
+
+Statistics for All Table Factors
+
+Pearson's Chi-squared test 
+------------------------------------------------------------
+Chi^2 = 100.8791      d.f. = 2      p <2e-16 
+
+        Minimum expected frequency: 107.762 
+
+[1] Cramér V / Phi:
+[1] "Overall Chi-results for multiple comparisions table"
+[1] "---------------------------------------------------"
+[1] "                                       "
+                        Analysis       chi df             p         cv
+1    Education  vs  Latent Class 418.25348 18  1.419130e-77 0.27217570
+2          DEP  vs  Latent Class  69.07327 12  4.772662e-10 0.13546596
+3 HealthImpact  vs  Latent Class 157.50208  6  2.001563e-31 0.28928994
+4        HTYPE  vs  Latent Class 425.58402 30  1.844904e-71 0.21266589
+5         QLOC  vs  Latent Class  15.13442  6  1.923663e-02 0.08967534
+6        AWTV3  vs  Latent Class 232.93018 18  2.368735e-39 0.20311521
+7         S2XX  vs  Latent Class 922.10188 36 3.288992e-170 0.28576170
+8        AWTV2  vs  Latent Class 741.55599 12 5.564577e-151 0.44386118
+                 Analysis      chi df            p        cv
+1                    <NA>       NA NA           NA        NA
+2                    <NA>       NA NA           NA        NA
+3                    <NA>       NA NA           NA        NA
+4                    <NA>       NA NA           NA        NA
+5                    <NA>       NA NA           NA        NA
+6                    <NA>       NA NA           NA        NA
+7                    <NA>       NA NA           NA        NA
+8                    <NA>       NA NA           NA        NA
+9 AWTV2  vs  Latent Class 100.8791  2 1.242729e-22 0.2315212
+$model1confint
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrr}
+  \hline
+ & V1 & 2.5 \% & 97.5 \% \\ 
+  \hline
+(Intercept) & 0.01 & 0.00 & 0.03 \\ 
+  Education & 0.50 & 0.41 & 0.60 \\ 
+  DEP & 1.42 & 1.10 & 1.84 \\ 
+  HealthImpact & 1.60 & 1.15 & 2.22 \\ 
+  HTYPE & 0.76 & 0.64 & 0.89 \\ 
+  QLOC & 0.85 & 0.55 & 1.29 \\ 
+  AWTV3 & 1.22 & 1.04 & 1.42 \\ 
+  AWTV2 & 5.14 & 3.66 & 7.46 \\ 
+   \hline
+\end{tabular}
+\caption{Non-user Binary GLM confidence intervals} 
+\end{table}
+
+$model1
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrr}
+  \hline
+ & Est. & 2.5\% & 97.5\% & z val. & p \\ 
+  \hline
+(Intercept) & -5.10 & -6.63 & -3.58 & -6.55 & 0.00 \\ 
+  Education & -0.69 & -0.87 & -0.50 & -7.25 & 0.00 \\ 
+  DEP & 0.35 & 0.09 & 0.61 & 2.68 & 0.01 \\ 
+  HealthImpact & 0.47 & 0.14 & 0.80 & 2.79 & 0.01 \\ 
+  HTYPE & -0.28 & -0.44 & -0.12 & -3.40 & 0.00 \\ 
+  QLOC & -0.16 & -0.59 & 0.26 & -0.75 & 0.45 \\ 
+  AWTV3 & 0.20 & 0.04 & 0.35 & 2.47 & 0.01 \\ 
+  AWTV2 & 1.64 & 1.28 & 1.99 & 9.01 & 0.00 \\ 
+   \hline
+\end{tabular}
+\caption{Nonusers Binary GLM} 
+\end{table}
+
+$model2
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrr}
+  \hline
+ & Est. & 2.5\% & 97.5\% & z val. & p \\ 
+  \hline
+(Intercept) & -3.28 & -4.31 & -2.25 & -6.24 & 0.00 \\ 
+  Education & -0.34 & -0.46 & -0.22 & -5.61 & 0.00 \\ 
+  DEP & 0.05 & -0.16 & 0.27 & 0.46 & 0.64 \\ 
+  HealthImpact & 0.49 & 0.16 & 0.83 & 2.93 & 0.00 \\ 
+  HTYPE & -0.11 & -0.21 & -0.02 & -2.27 & 0.02 \\ 
+  QLOC & 0.15 & -0.19 & 0.49 & 0.87 & 0.38 \\ 
+  AWTV3 & 0.31 & 0.17 & 0.44 & 4.49 & 0.00 \\ 
+  AWTV2 & 0.98 & 0.78 & 1.18 & 9.59 & 0.00 \\ 
+   \hline
+\end{tabular}
+\caption{Combined Limited Users Binary GLM} 
+\end{table}
+
+$model3
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrr}
+  \hline
+ & Est. & 2.5\% & 97.5\% & z val. & p \\ 
+  \hline
+(Intercept) & -4.16 & -5.47 & -2.86 & -6.24 & 0.00 \\ 
+  Education & -0.43 & -0.60 & -0.27 & -5.12 & 0.00 \\ 
+  DEP & 0.22 & -0.05 & 0.49 & 1.61 & 0.11 \\ 
+  HealthImpact & 0.51 & 0.12 & 0.90 & 2.58 & 0.01 \\ 
+  HTYPE & 0.04 & -0.08 & 0.16 & 0.67 & 0.50 \\ 
+  QLOC & 0.56 & 0.15 & 0.97 & 2.67 & 0.01 \\ 
+  AWTV3 & 0.29 & 0.12 & 0.46 & 3.35 & 0.00 \\ 
+  AWTV2 & 0.48 & 0.23 & 0.72 & 3.82 & 0.00 \\ 
+   \hline
+\end{tabular}
+\caption{Limited Users (Social Media) Binary GLM} 
+\end{table}
+
+$model4
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrr}
+  \hline
+ & Est. & 2.5\% & 97.5\% & z val. & p \\ 
+  \hline
+(Intercept) & 0.33 & -0.63 & 1.30 & 0.68 & 0.50 \\ 
+  Education & -0.09 & -0.21 & 0.03 & -1.44 & 0.15 \\ 
+  DEP & 0.23 & 0.03 & 0.43 & 2.31 & 0.02 \\ 
+  HealthImpact & -0.31 & -0.74 & 0.12 & -1.41 & 0.16 \\ 
+  HTYPE & 0.07 & -0.01 & 0.16 & 1.72 & 0.09 \\ 
+  QLOC & 0.15 & -0.22 & 0.52 & 0.80 & 0.43 \\ 
+  AWTV3 & 0.07 & -0.07 & 0.21 & 1.03 & 0.30 \\ 
+  AWTV2 & -1.32 & -1.50 & -1.13 & -13.89 & 0.00 \\ 
+   \hline
+\end{tabular}
+\caption{Limited Users (Social Media) Binary GLM} 
+\end{table}
+
+$model5B
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrrrrr}
+  \hline
+ & (Intercept) & Education & DEP & HealthImpact & HTYPE & QLOC & AWTV3 & AWTV2 \\ 
+  \hline
+2 & -1.46 & -0.25 & -0.05 & 0.35 & -0.03 & 0.41 & 0.23 & 0.50 \\ 
+  3 & -2.40 & -0.25 & -0.05 & 0.16 & -0.16 & 0.26 & 0.06 & 1.00 \\ 
+  4 & 0.35 & -0.34 & 0.29 & 0.21 & -0.03 & 0.41 & 0.28 & -0.63 \\ 
+  5 & -3.45 & -0.66 & 0.26 & 0.82 & -0.05 & 0.85 & 0.51 & 0.77 \\ 
+  6 & -3.07 & -0.42 & -0.06 & 0.53 & -0.27 & 0.13 & 0.41 & 1.40 \\ 
+  7 & -4.90 & -1.00 & 0.41 & 0.92 & -0.38 & 0.21 & 0.49 & 2.13 \\ 
+   \hline
+\end{tabular}
+\caption{Multinomonal regression coefficients} 
+\end{table}
+
+$model5SE
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrrrrr}
+  \hline
+ & (Intercept) & Education & DEP & HealthImpact & HTYPE & QLOC & AWTV3 & AWTV2 \\ 
+  \hline
+2 & 0.61 & 0.07 & 0.13 & 0.28 & 0.05 & 0.22 & 0.09 & 0.12 \\ 
+  3 & 0.83 & 0.09 & 0.18 & 0.34 & 0.08 & 0.28 & 0.11 & 0.16 \\ 
+  4 & 0.58 & 0.07 & 0.12 & 0.29 & 0.05 & 0.23 & 0.08 & 0.11 \\ 
+  5 & 0.76 & 0.09 & 0.16 & 0.28 & 0.07 & 0.26 & 0.10 & 0.15 \\ 
+  6 & 0.78 & 0.09 & 0.16 & 0.28 & 0.08 & 0.26 & 0.10 & 0.16 \\ 
+  7 & 0.90 & 0.11 & 0.16 & 0.28 & 0.09 & 0.28 & 0.10 & 0.21 \\ 
+   \hline
+\end{tabular}
+\caption{Multinomonal regression standard errors} 
+\end{table}
+
+$model5Z
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrrrrr}
+  \hline
+ & (Intercept) & Education & DEP & HealthImpact & HTYPE & QLOC & AWTV3 & AWTV2 \\ 
+  \hline
+2 & 0.01 & 0.01 & 0.73 & 0.20 & 0.48 & 0.06 & 0.00 & 0.00 \\ 
+  3 & 0.00 & 0.01 & 0.76 & 0.64 & 0.03 & 0.33 & 0.49 & 0.00 \\ 
+  4 & 0.68 & 0.01 & 0.01 & 0.42 & 0.45 & 0.06 & 0.00 & 0.00 \\ 
+  5 & 0.00 & 0.00 & 0.08 & 0.00 & 0.28 & 0.00 & 0.00 & 0.00 \\ 
+  6 & 0.00 & 0.00 & 0.76 & 0.05 & 0.00 & 0.60 & 0.00 & 0.00 \\ 
+  7 & 0.00 & 0.00 & 0.01 & 0.00 & 0.00 & 0.46 & 0.00 & 0.00 \\ 
+   \hline
+\end{tabular}
+\caption{Multinomonal pvalues} 
+\end{table}
+
+$model5odds
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrrrrr}
+  \hline
+ & (Intercept) & Education & DEP & HealthImpact & HTYPE & QLOC & AWTV3 & AWTV2 \\ 
+  \hline
+2 & 0.01 & 0.01 & 0.73 & 0.20 & 0.48 & 0.06 & 0.00 & 0.00 \\ 
+  3 & 0.00 & 0.01 & 0.76 & 0.64 & 0.03 & 0.33 & 0.49 & 0.00 \\ 
+  4 & 0.68 & 0.01 & 0.01 & 0.42 & 0.45 & 0.06 & 0.00 & 0.00 \\ 
+  5 & 0.00 & 0.00 & 0.08 & 0.00 & 0.28 & 0.00 & 0.00 & 0.00 \\ 
+  6 & 0.00 & 0.00 & 0.76 & 0.05 & 0.00 & 0.60 & 0.00 & 0.00 \\ 
+  7 & 0.00 & 0.00 & 0.01 & 0.00 & 0.00 & 0.46 & 0.00 & 0.00 \\ 
+   \hline
+\end{tabular}
+\caption{Multinomonal odds ratios} 
+\end{table}
+
+$Education
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrrrr}
+  \hline
+ & Latent Class & Aged 16 or under & Aged 17-18 & Aged 19-20 & Aged 21 or over & Total \\ 
+  \hline
+1 & Extensive political & 64 & 77 & 57 & 202 & 400 \\ 
+  2 & row \% & 16.0 & 19.2 & 14.2 & 50.5 & 21.3 \\ 
+  3 & col \% & 8.4 & 19.4 & 29.2 & 38.3 &  \\ 
+  4 & table \% & 3.4 & 4.1 & 3.0 & 10.7 &  \\ 
+  5 & Extensive & 87 & 73 & 31 & 96 & 287 \\ 
+  6 & row \% & 30.3 & 25.4 & 10.8 & 33.4 & 15.2 \\ 
+  7 & col \% & 11.4 & 18.4 & 15.9 & 18.2 &  \\ 
+  8 & table \% & 4.6 & 3.9 & 1.6 & 5.1 &  \\ 
+  9 & General (no social media) & 43 & 28 & 17 & 51 & 139 \\ 
+  10 & row \% & 30.9 & 20.1 & 12.2 & 36.7 & 7.4 \\ 
+  11 & col \% & 5.6 & 7.1 & 8.7 & 9.7 &  \\ 
+  12 & table \% & 2.3 & 1.5 & 0.9 & 2.7 &  \\ 
+  13 & Social and media & 121 & 103 & 57 & 91 & 372 \\ 
+  14 & row \% & 32.5 & 27.7 & 15.3 & 24.5 & 19.8 \\ 
+  15 & col \% & 15.9 & 25.9 & 29.2 & 17.3 &  \\ 
+  16 & table \% & 6.4 & 5.5 & 3.0 & 4.8 &  \\ 
+  17 & Social media limited & 115 & 37 & 12 & 24 & 188 \\ 
+  18 & row \% & 61.2 & 19.7 & 6.4 & 12.8 & 10.0 \\ 
+  19 & col \% & 15.1 & 9.3 & 6.2 & 4.6 &  \\ 
+  20 & table \% & 6.1 & 2.0 & 0.6 & 1.3 &  \\ 
+  21 & Limited & 109 & 45 & 14 & 48 & 216 \\ 
+  22 & row \% & 50.5 & 20.8 & 6.5 & 22.2 & 11.5 \\ 
+  23 & col \% & 14.3 & 11.3 & 7.2 & 9.1 &  \\ 
+  24 & table \% & 5.8 & 2.4 & 0.7 & 2.6 &  \\ 
+  25 & Non-users & 224 & 34 & 7 & 15 & 280 \\ 
+  26 & row \% & 80.0 & 12.1 & 2.5 & 5.4 & 14.9 \\ 
+  27 & col \% & 29.4 & 8.6 & 3.6 & 2.8 &  \\ 
+  28 & table \% & 11.9 & 1.8 & 0.4 & 0.8 &  \\ 
+  29 & Total & 763 & 397 & 195 & 527 & 1882 \\ 
+  30 &  & 40.5 & 21.1 & 10.4 & 28.0 &  \\ 
+   \hline
+\end{tabular}
+\caption{Education  vs Latent Class} 
+\end{table}
+
+$DEP
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrrr}
+  \hline
+ & Latent Class & Low & Medium & High & Total \\ 
+  \hline
+1 & Extensive political & 199 & 157 & 44 & 400 \\ 
+  2 & row \% & 49.8 & 39.2 & 11.0 & 21.3 \\ 
+  3 & col \% & 23.7 & 18.3 & 23.9 &  \\ 
+  4 & table \% & 10.6 & 8.3 & 2.3 &  \\ 
+  5 & Extensive & 151 & 112 & 24 & 287 \\ 
+  6 & row \% & 52.6 & 39.0 & 8.4 & 15.2 \\ 
+  7 & col \% & 18.0 & 13.1 & 13.0 &  \\ 
+  8 & table \% & 8.0 & 6.0 & 1.3 &  \\ 
+  9 & General (no social media) & 76 & 58 & 5 & 139 \\ 
+  10 & row \% & 54.7 & 41.7 & 3.6 & 7.4 \\ 
+  11 & col \% & 9.0 & 6.8 & 2.7 &  \\ 
+  12 & table \% & 4.0 & 3.1 & 0.3 &  \\ 
+  13 & Social and media & 125 & 191 & 56 & 372 \\ 
+  14 & row \% & 33.6 & 51.3 & 15.1 & 19.8 \\ 
+  15 & col \% & 14.9 & 22.3 & 30.4 &  \\ 
+  16 & table \% & 6.6 & 10.1 & 3.0 &  \\ 
+  17 & Social media limited & 70 & 106 & 12 & 188 \\ 
+  18 & row \% & 37.2 & 56.4 & 6.4 & 10.0 \\ 
+  19 & col \% & 8.3 & 12.4 & 6.5 &  \\ 
+  20 & table \% & 3.7 & 5.6 & 0.6 &  \\ 
+  21 & Limited & 113 & 92 & 11 & 216 \\ 
+  22 & row \% & 52.3 & 42.6 & 5.1 & 11.5 \\ 
+  23 & col \% & 13.5 & 10.7 & 6.0 &  \\ 
+  24 & table \% & 6.0 & 4.9 & 0.6 &  \\ 
+  25 & Non-users & 106 & 142 & 32 & 280 \\ 
+  26 & row \% & 37.9 & 50.7 & 11.4 & 14.9 \\ 
+  27 & col \% & 12.6 & 16.6 & 17.4 &  \\ 
+  28 & table \% & 5.6 & 7.5 & 1.7 &  \\ 
+  29 & Total & 840 & 858 & 184 & 1882 \\ 
+  30 &  & 44.6 & 45.6 & 9.8 &  \\ 
+   \hline
+\end{tabular}
+\caption{DEP  vs Latent Class} 
+\end{table}
+
+$HealthImpact
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrr}
+  \hline
+ & Latent Class & 0 & 1 & Total \\ 
+  \hline
+1 & Extensive political & 375 & 25 & 400 \\ 
+  2 & row \% & 93.8 & 6.2 & 21.3 \\ 
+  3 & col \% & 24.0 & 7.8 &  \\ 
+  4 & table \% & 19.9 & 1.3 &  \\ 
+  5 & Extensive & 249 & 38 & 287 \\ 
+  6 & row \% & 86.8 & 13.2 & 15.2 \\ 
+  7 & col \% & 16.0 & 11.8 &  \\ 
+  8 & table \% & 13.2 & 2.0 &  \\ 
+  9 & General (no social media) & 121 & 18 & 139 \\ 
+  10 & row \% & 87.1 & 12.9 & 7.4 \\ 
+  11 & col \% & 7.8 & 5.6 &  \\ 
+  12 & table \% & 6.4 & 1.0 &  \\ 
+  13 & Social and media & 338 & 34 & 372 \\ 
+  14 & row \% & 90.9 & 9.1 & 19.8 \\ 
+  15 & col \% & 21.7 & 10.6 &  \\ 
+  16 & table \% & 18.0 & 1.8 &  \\ 
+  17 & Social media limited & 138 & 50 & 188 \\ 
+  18 & row \% & 73.4 & 26.6 & 10.0 \\ 
+  19 & col \% & 8.8 & 15.6 &  \\ 
+  20 & table \% & 7.3 & 2.7 &  \\ 
+  21 & Limited & 166 & 50 & 216 \\ 
+  22 & row \% & 76.9 & 23.1 & 11.5 \\ 
+  23 & col \% & 10.6 & 15.6 &  \\ 
+  24 & table \% & 8.8 & 2.7 &  \\ 
+  25 & Non-users & 174 & 106 & 280 \\ 
+  26 & row \% & 62.1 & 37.9 & 14.9 \\ 
+  27 & col \% & 11.1 & 33.0 &  \\ 
+  28 & table \% & 9.2 & 5.6 &  \\ 
+  29 & Total & 1561 & 321 & 1882 \\ 
+  30 &  & 82.9 & 17.1 &  \\ 
+   \hline
+\end{tabular}
+\caption{HealthImpact  vs Latent Class} 
+\end{table}
+
+$HTYPE
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrrrrrr}
+  \hline
+ & Latent Class & 1 adult & 2 adults & 3+ adults & 1 adult \& children & 2 adults \& children & 3+ adults \& children & Total \\ 
+  \hline
+1 & Extensive political & 43 & 106 & 67 & 28 & 122 & 34 & 400 \\ 
+  2 & row \% & 10.8 & 26.5 & 16.8 & 7.0 & 30.5 & 8.5 & 21.3 \\ 
+  3 & col \% & 11.1 & 17.0 & 22.6 & 29.8 & 33.6 & 29.6 &  \\ 
+  4 & table \% & 2.3 & 5.6 & 3.6 & 1.5 & 6.5 & 1.8 &  \\ 
+  5 & Extensive & 35 & 105 & 42 & 23 & 67 & 15 & 287 \\ 
+  6 & row \% & 12.2 & 36.6 & 14.6 & 8.0 & 23.3 & 5.2 & 15.2 \\ 
+  7 & col \% & 9.0 & 16.8 & 14.1 & 24.5 & 18.5 & 13.0 &  \\ 
+  8 & table \% & 1.9 & 5.6 & 2.2 & 1.2 & 3.6 & 0.8 &  \\ 
+  9 & General (no social media) & 28 & 64 & 20 & 4 & 15 & 8 & 139 \\ 
+  10 & row \% & 20.1 & 46.0 & 14.4 & 2.9 & 10.8 & 5.8 & 7.4 \\ 
+  11 & col \% & 7.2 & 10.3 & 6.7 & 4.3 & 4.1 & 7.0 &  \\ 
+  12 & table \% & 1.5 & 3.4 & 1.1 & 0.2 & 0.8 & 0.4 &  \\ 
+  13 & Social and media & 30 & 80 & 98 & 22 & 107 & 35 & 372 \\ 
+  14 & row \% & 8.1 & 21.5 & 26.3 & 5.9 & 28.8 & 9.4 & 19.8 \\ 
+  15 & col \% & 7.7 & 12.8 & 33.0 & 23.4 & 29.5 & 30.4 &  \\ 
+  16 & table \% & 1.6 & 4.3 & 5.2 & 1.2 & 5.7 & 1.9 &  \\ 
+  17 & Social media limited & 41 & 73 & 20 & 12 & 30 & 12 & 188 \\ 
+  18 & row \% & 21.8 & 38.8 & 10.6 & 6.4 & 16.0 & 6.4 & 10.0 \\ 
+  19 & col \% & 10.5 & 11.7 & 6.7 & 12.8 & 8.3 & 10.4 &  \\ 
+  20 & table \% & 2.2 & 3.9 & 1.1 & 0.6 & 1.6 & 0.6 &  \\ 
+  21 & Limited & 75 & 90 & 27 & 3 & 15 & 6 & 216 \\ 
+  22 & row \% & 34.7 & 41.7 & 12.5 & 1.4 & 6.9 & 2.8 & 11.5 \\ 
+  23 & col \% & 19.3 & 14.4 & 9.1 & 3.2 & 4.1 & 5.2 &  \\ 
+  24 & table \% & 4.0 & 4.8 & 1.4 & 0.2 & 0.8 & 0.3 &  \\ 
+  25 & Non-users & 137 & 106 & 23 & 2 & 7 & 5 & 280 \\ 
+  26 & row \% & 48.9 & 37.9 & 8.2 & 0.7 & 2.5 & 1.8 & 14.9 \\ 
+  27 & col \% & 35.2 & 17.0 & 7.7 & 2.1 & 1.9 & 4.3 &  \\ 
+  28 & table \% & 7.3 & 5.6 & 1.2 & 0.1 & 0.4 & 0.3 &  \\ 
+  29 & Total & 389 & 624 & 297 & 94 & 363 & 115 & 1882 \\ 
+  30 &  & 20.7 & 33.2 & 15.8 & 5.0 & 19.3 & 6.1 &  \\ 
+   \hline
+\end{tabular}
+\caption{HTYPE  vs Latent Class} 
+\end{table}
+
+$QLOC
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrr}
+  \hline
+ & Latent Class & Urban & Rural & Total \\ 
+  \hline
+1 & Extensive political & 349 & 51 & 400 \\ 
+  2 & row \% & 87.2 & 12.8 & 21.3 \\ 
+  3 & col \% & 22.1 & 16.7 &  \\ 
+  4 & table \% & 18.5 & 2.7 &  \\ 
+  5 & Extensive & 232 & 55 & 287 \\ 
+  6 & row \% & 80.8 & 19.2 & 15.2 \\ 
+  7 & col \% & 14.7 & 18.0 &  \\ 
+  8 & table \% & 12.3 & 2.9 &  \\ 
+  9 & General (no social media) & 113 & 26 & 139 \\ 
+  10 & row \% & 81.3 & 18.7 & 7.4 \\ 
+  11 & col \% & 7.2 & 8.5 &  \\ 
+  12 & table \% & 6.0 & 1.4 &  \\ 
+  13 & Social and media & 320 & 52 & 372 \\ 
+  14 & row \% & 86.0 & 14.0 & 19.8 \\ 
+  15 & col \% & 20.3 & 17.0 &  \\ 
+  16 & table \% & 17.0 & 2.8 &  \\ 
+  17 & Social media limited & 144 & 44 & 188 \\ 
+  18 & row \% & 76.6 & 23.4 & 10.0 \\ 
+  19 & col \% & 9.1 & 14.4 &  \\ 
+  20 & table \% & 7.7 & 2.3 &  \\ 
+  21 & Limited & 179 & 37 & 216 \\ 
+  22 & row \% & 82.9 & 17.1 & 11.5 \\ 
+  23 & col \% & 11.4 & 12.1 &  \\ 
+  24 & table \% & 9.5 & 2.0 &  \\ 
+  25 & Non-users & 239 & 41 & 280 \\ 
+  26 & row \% & 85.4 & 14.6 & 14.9 \\ 
+  27 & col \% & 15.2 & 13.4 &  \\ 
+  28 & table \% & 12.7 & 2.2 &  \\ 
+  29 & Total & 1576 & 306 & 1882 \\ 
+  30 &  & 83.7 & 16.3 &  \\ 
+   \hline
+\end{tabular}
+\caption{QLOC  vs Latent Class} 
+\end{table}
+
+$AWTV3
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrrrr}
+  \hline
+ & Latent Class & AB & C1 & C2 & DE & Total \\ 
+  \hline
+1 & Extensive political & 137 & 154 & 67 & 42 & 400 \\ 
+  2 & row \% & 34.2 & 38.5 & 16.8 & 10.5 & 21.3 \\ 
+  3 & col \% & 34.7 & 25.5 & 17.6 & 8.4 &  \\ 
+  4 & table \% & 7.3 & 8.2 & 3.6 & 2.2 &  \\ 
+  5 & Extensive & 68 & 104 & 55 & 60 & 287 \\ 
+  6 & row \% & 23.7 & 36.2 & 19.2 & 20.9 & 15.2 \\ 
+  7 & col \% & 17.2 & 17.2 & 14.4 & 12.0 &  \\ 
+  8 & table \% & 3.6 & 5.5 & 2.9 & 3.2 &  \\ 
+  9 & General (no social media) & 50 & 42 & 24 & 23 & 139 \\ 
+  10 & row \% & 36.0 & 30.2 & 17.3 & 16.5 & 7.4 \\ 
+  11 & col \% & 12.7 & 7.0 & 6.3 & 4.6 &  \\ 
+  12 & table \% & 2.7 & 2.2 & 1.3 & 1.2 &  \\ 
+  13 & Social and media & 50 & 140 & 89 & 93 & 372 \\ 
+  14 & row \% & 13.4 & 37.6 & 23.9 & 25.0 & 19.8 \\ 
+  15 & col \% & 12.7 & 23.2 & 23.4 & 18.5 &  \\ 
+  16 & table \% & 2.7 & 7.4 & 4.7 & 4.9 &  \\ 
+  17 & Social media limited & 19 & 50 & 39 & 80 & 188 \\ 
+  18 & row \% & 10.1 & 26.6 & 20.7 & 42.6 & 10.0 \\ 
+  19 & col \% & 4.8 & 8.3 & 10.2 & 15.9 &  \\ 
+  20 & table \% & 1.0 & 2.7 & 2.1 & 4.3 &  \\ 
+  21 & Limited & 43 & 58 & 42 & 73 & 216 \\ 
+  22 & row \% & 19.9 & 26.9 & 19.4 & 33.8 & 11.5 \\ 
+  23 & col \% & 10.9 & 9.6 & 11.0 & 14.5 &  \\ 
+  24 & table \% & 2.3 & 3.1 & 2.2 & 3.9 &  \\ 
+  25 & Non-users & 28 & 56 & 65 & 131 & 280 \\ 
+  26 & row \% & 10.0 & 20.0 & 23.2 & 46.8 & 14.9 \\ 
+  27 & col \% & 7.1 & 9.3 & 17.1 & 26.1 &  \\ 
+  28 & table \% & 1.5 & 3.0 & 3.5 & 7.0 &  \\ 
+  29 & Total & 395 & 604 & 381 & 502 & 1882 \\ 
+  30 &  & 21.0 & 32.1 & 20.2 & 26.7 &  \\ 
+   \hline
+\end{tabular}
+\caption{AWTV3  vs Latent Class} 
+\end{table}
+
+$S2XX
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrrrrrrr}
+  \hline
+ & Latent Class & 16-24 & 25-34 & 35-44 & 45-54 & 55-64 & 65-74 & 75+ & Total \\ 
+  \hline
+1 & Extensive political & 51 & 93 & 105 & 77 & 56 & 14 & 4 & 400 \\ 
+  2 & row \% & 12.8 & 23.2 & 26.2 & 19.2 & 14.0 & 3.5 & 1.0 & 21.3 \\ 
+  3 & col \% & 20.7 & 36.3 & 32.6 & 28.3 & 18.1 & 6.3 & 1.6 &  \\ 
+  4 & table \% & 2.7 & 4.9 & 5.6 & 4.1 & 3.0 & 0.7 & 0.2 &  \\ 
+  5 & Extensive & 24 & 36 & 61 & 68 & 53 & 30 & 15 & 287 \\ 
+  6 & row \% & 8.4 & 12.5 & 21.3 & 23.7 & 18.5 & 10.5 & 5.2 & 15.2 \\ 
+  7 & col \% & 9.8 & 14.1 & 18.9 & 25.0 & 17.2 & 13.6 & 5.9 &  \\ 
+  8 & table \% & 1.3 & 1.9 & 3.2 & 3.6 & 2.8 & 1.6 & 0.8 &  \\ 
+  9 & General (no social media) & 6 & 8 & 24 & 22 & 30 & 27 & 22 & 139 \\ 
+  10 & row \% & 4.3 & 5.8 & 17.3 & 15.8 & 21.6 & 19.4 & 15.8 & 7.4 \\ 
+  11 & col \% & 2.4 & 3.1 & 7.5 & 8.1 & 9.7 & 12.2 & 8.6 &  \\ 
+  12 & table \% & 0.3 & 0.4 & 1.3 & 1.2 & 1.6 & 1.4 & 1.2 &  \\ 
+  13 & Social and media & 141 & 85 & 72 & 39 & 24 & 5 & 6 & 372 \\ 
+  14 & row \% & 37.9 & 22.8 & 19.4 & 10.5 & 6.5 & 1.3 & 1.6 & 19.8 \\ 
+  15 & col \% & 57.3 & 33.2 & 22.4 & 14.3 & 7.8 & 2.3 & 2.3 &  \\ 
+  16 & table \% & 7.5 & 4.5 & 3.8 & 2.1 & 1.3 & 0.3 & 0.3 &  \\ 
+  17 & Social media limited & 14 & 22 & 31 & 28 & 37 & 29 & 27 & 188 \\ 
+  18 & row \% & 7.4 & 11.7 & 16.5 & 14.9 & 19.7 & 15.4 & 14.4 & 10.0 \\ 
+  19 & col \% & 5.7 & 8.6 & 9.6 & 10.3 & 12.0 & 13.1 & 10.5 &  \\ 
+  20 & table \% & 0.7 & 1.2 & 1.6 & 1.5 & 2.0 & 1.5 & 1.4 &  \\ 
+  21 & Limited & 7 & 11 & 16 & 20 & 51 & 46 & 65 & 216 \\ 
+  22 & row \% & 3.2 & 5.1 & 7.4 & 9.3 & 23.6 & 21.3 & 30.1 & 11.5 \\ 
+  23 & col \% & 2.8 & 4.3 & 5.0 & 7.4 & 16.5 & 20.8 & 25.4 &  \\ 
+  24 & table \% & 0.4 & 0.6 & 0.9 & 1.1 & 2.7 & 2.4 & 3.5 &  \\ 
+  25 & Non-users & 3 & 1 & 13 & 18 & 58 & 70 & 117 & 280 \\ 
+  26 & row \% & 1.1 & 0.4 & 4.6 & 6.4 & 20.7 & 25.0 & 41.8 & 14.9 \\ 
+  27 & col \% & 1.2 & 0.4 & 4.0 & 6.6 & 18.8 & 31.7 & 45.7 &  \\ 
+  28 & table \% & 0.2 & 0.1 & 0.7 & 1.0 & 3.1 & 3.7 & 6.2 &  \\ 
+  29 & Total & 246 & 256 & 322 & 272 & 309 & 221 & 256 & 1882 \\ 
+  30 &  & 13.1 & 13.6 & 17.1 & 14.5 & 16.4 & 11.7 & 13.6 &  \\ 
+   \hline
+\end{tabular}
+\caption{S2XX  vs Latent Class} 
+\end{table}
+
+$AWTV2
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrrr}
+  \hline
+ & Latent Class & 16-34 & 35-54 & 55+ & Total \\ 
+  \hline
+1 & Extensive political & 144 & 182 & 74 & 400 \\ 
+  2 & row \% & 36.0 & 45.5 & 18.5 & 21.3 \\ 
+  3 & col \% & 28.7 & 30.6 & 9.4 &  \\ 
+  4 & table \% & 7.7 & 9.7 & 3.9 &  \\ 
+  5 & Extensive & 60 & 129 & 98 & 287 \\ 
+  6 & row \% & 20.9 & 44.9 & 34.1 & 15.2 \\ 
+  7 & col \% & 12.0 & 21.7 & 12.5 &  \\ 
+  8 & table \% & 3.2 & 6.9 & 5.2 &  \\ 
+  9 & General (no social media) & 14 & 46 & 79 & 139 \\ 
+  10 & row \% & 10.1 & 33.1 & 56.8 & 7.4 \\ 
+  11 & col \% & 2.8 & 7.7 & 10.1 &  \\ 
+  12 & table \% & 0.7 & 2.4 & 4.2 &  \\ 
+  13 & Social and media & 226 & 111 & 35 & 372 \\ 
+  14 & row \% & 60.8 & 29.8 & 9.4 & 19.8 \\ 
+  15 & col \% & 45.0 & 18.7 & 4.5 &  \\ 
+  16 & table \% & 12.0 & 5.9 & 1.9 &  \\ 
+  17 & Social media limited & 36 & 59 & 93 & 188 \\ 
+  18 & row \% & 19.1 & 31.4 & 49.5 & 10.0 \\ 
+  19 & col \% & 7.2 & 9.9 & 11.8 &  \\ 
+  20 & table \% & 1.9 & 3.1 & 4.9 &  \\ 
+  21 & Limited & 18 & 36 & 162 & 216 \\ 
+  22 & row \% & 8.3 & 16.7 & 75.0 & 11.5 \\ 
+  23 & col \% & 3.6 & 6.1 & 20.6 &  \\ 
+  24 & table \% & 1.0 & 1.9 & 8.6 &  \\ 
+  25 & Non-users & 4 & 31 & 245 & 280 \\ 
+  26 & row \% & 1.4 & 11.1 & 87.5 & 14.9 \\ 
+  27 & col \% & 0.8 & 5.2 & 31.2 &  \\ 
+  28 & table \% & 0.2 & 1.6 & 13.0 &  \\ 
+  29 & Total & 502 & 594 & 786 & 1882 \\ 
+  30 &  & 26.7 & 31.6 & 41.8 &  \\ 
+   \hline
+\end{tabular}
+\caption{AWTV2  vs Latent Class} 
+\end{table}
+
+$limited
+$limited$Education
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrrrr}
+  \hline
+ & Latent Class & Aged 16 or under & Aged 17-18 & Aged 19-20 & Aged 21 or over & Total \\ 
+  \hline
+1 & Other Users & 539 & 315 & 169 & 455 & 1478 \\ 
+  2 & row \% & 36.5 & 21.3 & 11.4 & 30.8 & 78.5 \\ 
+  3 & col \% & 70.6 & 79.3 & 86.7 & 86.3 &  \\ 
+  4 & table \% & 28.6 & 16.7 & 9.0 & 24.2 &  \\ 
+  5 & Limited Users & 224 & 82 & 26 & 72 & 404 \\ 
+  6 & row \% & 55.4 & 20.3 & 6.4 & 17.8 & 21.5 \\ 
+  7 & col \% & 29.4 & 20.7 & 13.3 & 13.7 &  \\ 
+  8 & table \% & 11.9 & 4.4 & 1.4 & 3.8 &  \\ 
+  9 & Total & 763 & 397 & 195 & 527 & 1882 \\ 
+  10 &  & 40.5 & 21.1 & 10.4 & 28.0 &  \\ 
+   \hline
+\end{tabular}
+\caption{Education  vs Latent Class} 
+\end{table}
+
+$limited$DEP
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrrr}
+  \hline
+ & Latent Class & Low & Medium & High & Total \\ 
+  \hline
+1 & Other Users & 657 & 660 & 161 & 1478 \\ 
+  2 & row \% & 44.5 & 44.7 & 10.9 & 78.5 \\ 
+  3 & col \% & 78.2 & 76.9 & 87.5 &  \\ 
+  4 & table \% & 34.9 & 35.1 & 8.6 &  \\ 
+  5 & Limited Users & 183 & 198 & 23 & 404 \\ 
+  6 & row \% & 45.3 & 49.0 & 5.7 & 21.5 \\ 
+  7 & col \% & 21.8 & 23.1 & 12.5 &  \\ 
+  8 & table \% & 9.7 & 10.5 & 1.2 &  \\ 
+  9 & Total & 840 & 858 & 184 & 1882 \\ 
+  10 &  & 44.6 & 45.6 & 9.8 &  \\ 
+   \hline
+\end{tabular}
+\caption{DEP  vs Latent Class} 
+\end{table}
+
+$limited$HealthImpact
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrr}
+  \hline
+ & Latent Class & 0 & 1 & Total \\ 
+  \hline
+1 & Other Users & 1257 & 221 & 1478 \\ 
+  2 & row \% & 85.0 & 15.0 & 78.5 \\ 
+  3 & col \% & 80.5 & 68.8 &  \\ 
+  4 & table \% & 66.8 & 11.7 &  \\ 
+  5 & Limited Users & 304 & 100 & 404 \\ 
+  6 & row \% & 75.2 & 24.8 & 21.5 \\ 
+  7 & col \% & 19.5 & 31.2 &  \\ 
+  8 & table \% & 16.2 & 5.3 &  \\ 
+  9 & Total & 1561 & 321 & 1882 \\ 
+  10 &  & 82.9 & 17.1 &  \\ 
+   \hline
+\end{tabular}
+\caption{HealthImpact  vs Latent Class} 
+\end{table}
+
+$limited$HTYPE
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrrrrrr}
+  \hline
+ & Latent Class & 1 adult & 2 adults & 3+ adults & 1 adult \& children & 2 adults \& children & 3+ adults \& children & Total \\ 
+  \hline
+1 & Other Users & 273 & 461 & 250 & 79 & 318 & 97 & 1478 \\ 
+  2 & row \% & 18.5 & 31.2 & 16.9 & 5.3 & 21.5 & 6.6 & 78.5 \\ 
+  3 & col \% & 70.2 & 73.9 & 84.2 & 84.0 & 87.6 & 84.3 &  \\ 
+  4 & table \% & 14.5 & 24.5 & 13.3 & 4.2 & 16.9 & 5.2 &  \\ 
+  5 & Limited Users & 116 & 163 & 47 & 15 & 45 & 18 & 404 \\ 
+  6 & row \% & 28.7 & 40.3 & 11.6 & 3.7 & 11.1 & 4.5 & 21.5 \\ 
+  7 & col \% & 29.8 & 26.1 & 15.8 & 16.0 & 12.4 & 15.7 &  \\ 
+  8 & table \% & 6.2 & 8.7 & 2.5 & 0.8 & 2.4 & 1.0 &  \\ 
+  9 & Total & 389 & 624 & 297 & 94 & 363 & 115 & 1882 \\ 
+  10 &  & 20.7 & 33.2 & 15.8 & 5.0 & 19.3 & 6.1 &  \\ 
+   \hline
+\end{tabular}
+\caption{HTYPE  vs Latent Class} 
+\end{table}
+
+$limited$QLOC
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrr}
+  \hline
+ & Latent Class & Urban & Rural & Total \\ 
+  \hline
+1 & Other Users & 1253 & 225 & 1478 \\ 
+  2 & row \% & 84.8 & 15.2 & 78.5 \\ 
+  3 & col \% & 79.5 & 73.5 &  \\ 
+  4 & table \% & 66.6 & 12.0 &  \\ 
+  5 & Limited Users & 323 & 81 & 404 \\ 
+  6 & row \% & 80.0 & 20.0 & 21.5 \\ 
+  7 & col \% & 20.5 & 26.5 &  \\ 
+  8 & table \% & 17.2 & 4.3 &  \\ 
+  9 & Total & 1576 & 306 & 1882 \\ 
+  10 &  & 83.7 & 16.3 &  \\ 
+   \hline
+\end{tabular}
+\caption{QLOC  vs Latent Class} 
+\end{table}
+
+$limited$AWTV3
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrrrr}
+  \hline
+ & Latent Class & AB & C1 & C2 & DE & Total \\ 
+  \hline
+1 & Other Users & 333 & 496 & 300 & 349 & 1478 \\ 
+  2 & row \% & 22.5 & 33.6 & 20.3 & 23.6 & 78.5 \\ 
+  3 & col \% & 84.3 & 82.1 & 78.7 & 69.5 &  \\ 
+  4 & table \% & 17.7 & 26.4 & 15.9 & 18.5 &  \\ 
+  5 & Limited Users & 62 & 108 & 81 & 153 & 404 \\ 
+  6 & row \% & 15.3 & 26.7 & 20.0 & 37.9 & 21.5 \\ 
+  7 & col \% & 15.7 & 17.9 & 21.3 & 30.5 &  \\ 
+  8 & table \% & 3.3 & 5.7 & 4.3 & 8.1 &  \\ 
+  9 & Total & 395 & 604 & 381 & 502 & 1882 \\ 
+  10 &  & 21.0 & 32.1 & 20.2 & 26.7 &  \\ 
+   \hline
+\end{tabular}
+\caption{AWTV3  vs Latent Class} 
+\end{table}
+
+$limited$S2XX
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrrrrrrr}
+  \hline
+ & Latent Class & 16-24 & 25-34 & 35-44 & 45-54 & 55-64 & 65-74 & 75+ & Total \\ 
+  \hline
+1 & Other Users & 225 & 223 & 275 & 224 & 221 & 146 & 164 & 1478 \\ 
+  2 & row \% & 15.2 & 15.1 & 18.6 & 15.2 & 15.0 & 9.9 & 11.1 & 78.5 \\ 
+  3 & col \% & 91.5 & 87.1 & 85.4 & 82.4 & 71.5 & 66.1 & 64.1 &  \\ 
+  4 & table \% & 12.0 & 11.8 & 14.6 & 11.9 & 11.7 & 7.8 & 8.7 &  \\ 
+  5 & Limited Users & 21 & 33 & 47 & 48 & 88 & 75 & 92 & 404 \\ 
+  6 & row \% & 5.2 & 8.2 & 11.6 & 11.9 & 21.8 & 18.6 & 22.8 & 21.5 \\ 
+  7 & col \% & 8.5 & 12.9 & 14.6 & 17.6 & 28.5 & 33.9 & 35.9 &  \\ 
+  8 & table \% & 1.1 & 1.8 & 2.5 & 2.6 & 4.7 & 4.0 & 4.9 &  \\ 
+  9 & Total & 246 & 256 & 322 & 272 & 309 & 221 & 256 & 1882 \\ 
+  10 &  & 13.1 & 13.6 & 17.1 & 14.5 & 16.4 & 11.7 & 13.6 &  \\ 
+   \hline
+\end{tabular}
+\caption{S2XX  vs Latent Class} 
+\end{table}
+
+$limited$AWTV2
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{llrrrr}
+  \hline
+ & Latent Class & 16-34 & 35-54 & 55+ & Total \\ 
+  \hline
+1 & Other Users & 448 & 499 & 531 & 1478 \\ 
+  2 & row \% & 30.3 & 33.8 & 35.9 & 78.5 \\ 
+  3 & col \% & 89.2 & 84.0 & 67.6 &  \\ 
+  4 & table \% & 23.8 & 26.5 & 28.2 &  \\ 
+  5 & Limited Users & 54 & 95 & 255 & 404 \\ 
+  6 & row \% & 13.4 & 23.5 & 63.1 & 21.5 \\ 
+  7 & col \% & 10.8 & 16.0 & 32.4 &  \\ 
+  8 & table \% & 2.9 & 5.0 & 13.5 &  \\ 
+  9 & Total & 502 & 594 & 786 & 1882 \\ 
+  10 &  & 26.7 & 31.6 & 41.8 &  \\ 
+   \hline
+\end{tabular}
+\caption{AWTV2  vs Latent Class} 
+\end{table}
+
+
+$chitables
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{rlrrrr}
+  \hline
+ & Analysis & chi & df & p & cv \\ 
+  \hline
+1 & Education  vs  Latent Class & 418.25 &  18 & 0.00 & 0.27 \\ 
+  2 & DEP  vs  Latent Class & 69.07 &  12 & 0.00 & 0.14 \\ 
+  3 & HealthImpact  vs  Latent Class & 157.50 &   6 & 0.00 & 0.29 \\ 
+  4 & HTYPE  vs  Latent Class & 425.58 &  30 & 0.00 & 0.21 \\ 
+  5 & QLOC  vs  Latent Class & 15.13 &   6 & 0.02 & 0.09 \\ 
+  6 & AWTV3  vs  Latent Class & 232.93 &  18 & 0.00 & 0.20 \\ 
+  7 & S2XX  vs  Latent Class & 922.10 &  36 & 0.00 & 0.29 \\ 
+  8 & AWTV2  vs  Latent Class & 741.56 &  12 & 0.00 & 0.44 \\ 
+   \hline
+\end{tabular}
+\caption{Overall Chi results} 
+\end{table}
+
+$limitedchitables
+% latex table generated in R 3.6.1 by xtable 1.8-4 package
+% Fri Sep 13 10:51:17 2019
+\begin{table}[ht]
+\centering
+\begin{tabular}{rlrrrr}
+  \hline
+ & Analysis & chi & df & p & cv \\ 
+  \hline
+1 &  &  &  &  &  \\ 
+  2 &  &  &  &  &  \\ 
+  3 &  &  &  &  &  \\ 
+  4 &  &  &  &  &  \\ 
+  5 &  &  &  &  &  \\ 
+  6 &  &  &  &  &  \\ 
+  7 &  &  &  &  &  \\ 
+  8 &  &  &  &  &  \\ 
+  9 & AWTV2  vs  Latent Class & 100.88 &   2 & 0.00 & 0.23 \\ 
+   \hline
+\end{tabular}
+\caption{Overall Chi results} 
+\end{table}
+
+RStudioGD 
+        2 
